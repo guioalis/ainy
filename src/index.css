@@ -4,12 +4,38 @@
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
 .animated-bg {
   background: linear-gradient(-45deg, #ffe5f0, #ffd1dc, #ffb6c1, #ffc0cb);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
+  min-height: 100vh;
 }
 
 @keyframes gradient {
@@ -22,4 +48,19 @@
   100% {
     background-position: 0% 50%;
   }
+}
+
+/* Ensure proper scrolling behavior */
+.overflow-y-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Improve input and button styling */
+button, input, textarea {
+  font-family: inherit;
+}
+
+/* Ensure proper z-index stacking */
+.z-50 {
+  z-index: 50;
 }
